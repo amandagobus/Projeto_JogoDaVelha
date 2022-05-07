@@ -4,3 +4,6 @@ Projeto de Jogo da Velha criado durante o Bootcamp da DIO "Órbi Web Games Devel
 Este projeto contém um jogo da velha construido utilizando Html, CSS e JavaScript
 ## Como executar
 Fazer o Download do Projeto, e abrir o arquivo index.html em um navegador da sua preferência
+
+<![alt](https://Projeto_JogoDaVelha/Jogo_daVelha.png)>
+<img src="/Jogo_daVelha.png" alt="Jogo da velha imagem"/>
