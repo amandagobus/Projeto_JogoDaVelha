@@ -11,8 +11,10 @@ mudarJogador('X');
 
 
 function escolherQuadrado(id){
+if(vencedor !== null){
+    return;
+}
   var quadrado = document.getElementById(id);
-
   if(quadrado.innerHTML !== '-'){
     return;
 }
@@ -87,6 +89,7 @@ function verificaVencedor(){
     }
     if(verificaSequencia(quadrado3, quadrado5, quadrado7)){
         mudarCorQuadrado(quadrado3, quadrado5, quadrado7);
+        mudarVencedor(quadrado1);
     }
 
 }
@@ -108,6 +111,7 @@ function mudarCorQuadrado(quadrado1, quadrado2, quadrado3){
 
 function verificaSequencia(quadrado1, quadrado2,quadrado3){
     var eigual = false;
+    
     if(quadrado1.innerHTML !== '-' && quadrado1.innerHTML === quadrado2.innerHTML && quadrado2.innerHTML === quadrado3.innerHTML){
         eigual = true;
     }
@@ -115,3 +119,18 @@ function verificaSequencia(quadrado1, quadrado2,quadrado3){
 
 }
 
+
+
+function reiniciar(){
+    vencedor = null;
+    vencedorSelecionado.innerHTML= '';
+
+    // limpar tabuleiro para reiniciar jogo
+    for(var i = 1 ; i <=9; i ++){
+        var quadrado = document.getElementById(i);
+        quadrado.style.background = '#eee';
+        quadrado.style.color = '#eee';
+        quadrado.innerHTML = '-';
+    }
+    mudarJogador ='X';
+}
